@@ -17,10 +17,12 @@ export default function Hero() {
       <Grid container spacing={3} className="md:px-10" direction={breakpoint ? 'row' : 'column-reverse'}>
         <Grid item xs={12} md={7} className="flex items-center">
           <div className="self-center">
-            <h3 className="text-blue-800">Hello i am Satria Herman.</h3>
-            <h2>Frontend Developer who <br className="hidden md:block" /> experienced in React </h2>
+            {
+              breakpoint ? (<h3 className="text-blue-800 sm:text-14">Hello i am Satria Herman.</h3>) : <h5 className="text-blue-800">Hello i am Satria Herman.</h5>
+            }
+            <h2 className="dark:text-white">Frontend Developer who <br className="hidden md:block" /> experienced in React </h2>
             <br />
-            <p className="break-words" style={{ maxWidth: '600px' }}>I am a Indonesian Developer and i have been working as Frontend Developer for 1 years. I have worked for startup company such as Clodeo and Brainmatics. I graduated from Vocational High School 3 Jepara at 2021. I am Skilled at Reactjs, Tailwind, Laravel and Bootstrap</p>
+            <p className="break-words dark:text-white" style={{ maxWidth: '600px' }}>I am a Indonesian Developer and i have been working as Frontend Developer for 1 years. I have worked for startup company such as Clodeo and Brainmatics. I graduated from Vocational High School 3 Jepara at 2021. I am Skilled at Reactjs, Tailwind, Laravel and Bootstrap</p>
             <br />
             <div className="flex flex-wrap">
               <Button variant="contained">

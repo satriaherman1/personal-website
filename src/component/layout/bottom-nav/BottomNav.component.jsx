@@ -24,9 +24,9 @@ export default function BottomNavComponent() {
         width: '100%',
       }}
       style={boxStyle}
-      className="bottom-nav py-2 bg-white drop-shadow-md"
+      className="bottom-nav bg-white drop-shadow-md"
     >
-      <BottomNavigation value={activeNav} onChange={(e, newValue) => changeBottomNavigation(e, newValue)}>
+      <BottomNavigation className="py-2" value={activeNav} onChange={(e, newValue) => changeBottomNavigation(e, newValue)}>
         <BottomNavigationAction label="About Me" value="" icon={<PersonIcon />} />
         <BottomNavigationAction label="Blog" value="blog" icon={<MenuBookIcon />} />
         <BottomNavigationAction label="Project" value="project" icon={<WorkIcon />} />

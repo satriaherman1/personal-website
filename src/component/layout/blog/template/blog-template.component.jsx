@@ -9,14 +9,14 @@ import MeImg from 'config/PathImage';
 export default function BlogTemplateComponent(props) {
   return (
 
-    <Card>
+    <Card className="p-3 shadow dark:bg-gray-800" style={{ backgroundImage: 'none' }}>
       <CardMedia component="img" width="100%" src={props.image} />
-      <CardContent style={{ paddingBottom: 0 }} className="filter drop-shadow-lg bg-white">
+      <CardContent style={{ paddingBottom: 0 }} className="dark:bg-gray-800 bg-white">
         <div className="pt-1 pb-6 border-b-2">
           <h4>{props.title}</h4>
         </div>
       </CardContent>
-      <CardActions style={{ background: '#fff' }} className="filter drop-shadow-lg bg-white">
+      <CardActions className="dark:bg-gray-800 bg-white">
         <div className="flex items-center w-full">
           <Avatar src={MeImg} className="m-2" />
           <div className="flex flex-col ml-1">

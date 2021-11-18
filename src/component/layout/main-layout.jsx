@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogComponent from './blog/blog.component';
 import Hero from './Hero';
+import HireComponent from './hire/hire.component';
 import ProjectComponent from './project/project.component';
 
 export default function MainLayout() {
@@ -17,7 +18,8 @@ export default function MainLayout() {
       <br />
       <br />
       <br />
-      <BlogComponent />
+      <BlogComponent more />
+      <HireComponent />
     </div>
 
   );

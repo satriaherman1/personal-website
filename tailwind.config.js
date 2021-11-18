@@ -1,8 +1,12 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'gray-secondary': '#182133',
+      },
+    },
     container: {
       center: true,
       padding: {
@@ -12,13 +16,7 @@ module.exports = {
         lg: '2.4rem',
       },
     },
-    // colors: {
-    //   primary: {
-    //     DEFAULT: '#284a99',
-    //     dark: '#183270',
-    //     light: '#4463ab',
-    //   },
-    // },
+
   },
   variants: {
     extend: {},
