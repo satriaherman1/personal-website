@@ -1,7 +1,9 @@
 import { BosImg } from 'config/PathImage';
 import React from 'react';
-import { Grid, IconButton } from '@mui/material';
+import { IconButton } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
 import BlogTemplateComponent from './template/blog-template.component';
 
 export default function BlogComponent(props) {
@@ -35,32 +37,74 @@ export default function BlogComponent(props) {
     width: 'fit-content',
   };
 
+  const sliderConfig = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    // centerMode: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 560,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  };
+
   return (
-    <section className="bg-blue-900 dark:bg-gray-secondary">
+    <section className={props.background && 'bg-blue-900 dark:bg-gray-secondary'}>
       <div className="container mb-4 py-10 ">
         <div className="md:px-10">
           <h3 className="text-white">Recently Article</h3>
           <br />
-          <Grid container spacing={4}>
+          <Slider {...sliderConfig}>
             {
               BlogData.map((data) => (
-                <Grid item xs={12} md={4}>
+                <div>
                   <BlogTemplateComponent
                     title={data.title}
                     author={data.author}
                     authorTitle={data.authorTitle}
                     image={data.image}
                   />
-                </Grid>
+                </div>
+
               ))
             }
-          </Grid>
+          </Slider>
         </div>
         {props.more && (
-        <IconButton component="span" style={seeMoreStyle} className="d-flex">
-          <p style={{ fontSize: '15px' }}>See More</p>
-          <ArrowForwardIcon />
-        </IconButton>
+        <Link to="/blog">
+          <IconButton component="span" style={seeMoreStyle} className="d-flex">
+            <p style={{ fontSize: '15px' }}>See More</p>
+            <ArrowForwardIcon />
+          </IconButton>
+        </Link>
         )}
       </div>
     </section>

@@ -9,7 +9,7 @@ import MeImg from 'config/PathImage';
 export default function BlogTemplateComponent(props) {
   return (
 
-    <Card className="p-3 shadow dark:bg-gray-800" style={{ backgroundImage: 'none' }}>
+    <Card className="p-3 shadow dark:bg-gray-800 mx-auto" style={{ backgroundImage: 'none', width: '96%' }}>
       <CardMedia component="img" width="100%" src={props.image} />
       <CardContent style={{ paddingBottom: 0 }} className="dark:bg-gray-800 bg-white">
         <div className="pt-1 pb-6 border-b-2">

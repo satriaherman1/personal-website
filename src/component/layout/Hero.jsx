@@ -18,7 +18,7 @@ export default function Hero() {
         <Grid item xs={12} md={7} className="flex items-center">
           <div className="self-center">
             {
-              breakpoint ? (<h3 className="text-blue-800 sm:text-14">Hello i am Satria Herman.</h3>) : <h5 className="text-blue-800">Hello i am Satria Herman.</h5>
+              breakpoint ? (<h3 className="text-blue-800 sm:text-14 dark:text-blue-400">Hello i am Satria Herman.</h3>) : <h5 className="text-blue-800 dark:text-blue-400">Hello i am Satria Herman.</h5>
             }
             <h2 className="dark:text-white">Frontend Developer who <br className="hidden md:block" /> experienced in React </h2>
             <br />

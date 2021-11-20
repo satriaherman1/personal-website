@@ -18,7 +18,7 @@ export default function MainLayout() {
       <br />
       <br />
       <br />
-      <BlogComponent more />
+      <BlogComponent more background />
       <HireComponent />
     </div>
 

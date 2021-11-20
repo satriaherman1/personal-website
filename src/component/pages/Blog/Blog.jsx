@@ -1,6 +1,7 @@
 import { Divider, Grid } from '@mui/material';
 import BlogComponent from 'component/layout/blog/blog.component';
 import BlogTemplateListComponent from 'component/layout/blog/list/blog-template-list.component';
+import ProfileComponent from 'component/layout/profile/profile.component';
 
 export default function Blog() {
   const blogPageStyle = {
@@ -11,6 +12,7 @@ export default function Blog() {
   ];
   return (
     <div style={blogPageStyle}>
+      <ProfileComponent />
       <BlogComponent />
       <div className="container">
         <div className="md:px-5 dark:text-white">
